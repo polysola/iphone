@@ -43,8 +43,8 @@ const Hero = () => {
         id="cta"
         className="flex flex-col items-center opacity-0 translate-y-20"
       >
-        <a href="https://firstledger.net/token/rw8mCyzjaCV1QtU3Ub6qk9uU1Tu9Xm9a6R/4158525000000000000000000000000000000000" className="btn">Buy</a>
-        <p className="font-normal text-xl">From $199/month or $999</p>
+        <a href="https://firstledger.net/" className="btn">Buy</a>
+        <p className="font-normal text-xl">From First Ledger</p>
       </div>
     </section>
   )
