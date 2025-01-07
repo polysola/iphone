@@ -18,22 +18,47 @@ const Hero = () => {
     window.addEventListener('resize', handleVideoSrcSet);
 
     return () => {
-      window.removeEventListener('reisze', handleVideoSrcSet)
+      window.removeEventListener('resize', handleVideoSrcSet) // Fixed typo
     }
   }, [])
 
   useGSAP(() => {
-    gsap.to('#hero', { opacity: 1, delay: 2 })
-    gsap.to('#cta', { opacity: 1, y: -50, delay: 2 })
+    // Use shorter delays on mobile
+    const delay = window.innerWidth < 760 ? 1 : 2;
+
+    gsap.set('#hero', { opacity: 0 });
+    gsap.set('#cta', { opacity: 0, y: 20 });
+
+    const tl = gsap.timeline();
+
+    tl.to('#hero', {
+      opacity: 1,
+      delay,
+      duration: 1,
+      ease: 'power2.out'
+    })
+      .to('#cta', {
+        opacity: 1,
+        y: -50,
+        duration: 1,
+        ease: 'power2.out'
+      }, '-=0.5'); // Slightly overlap animations
   }, [])
 
   return (
     <section className="w-full nav-height bg-black relative">
       <div className="h-5/6 w-full flex-center flex-col">
-        <p id="hero" className="hero-title">iPhone 15 Pro on XRP</p>
-        <img className='w-24 mb-12 sm:mb-0' src="/xrp.svg" alt="" srcset="" />
+        <p id="hero" className="hero-title opacity-0">iPhone 15 Pro on XRP</p>
+        <img className='w-24 mb-12 sm:mb-0' src="/xrp.svg" alt="XRP Logo" />
         <div className="md:w-10/12 w-9/12">
-          <video className="pointer-events-none" autoPlay muted playsInline={true} key={videoSrc}>
+          <video
+            className="pointer-events-none"
+            autoPlay
+            muted
+            playsInline={true}
+            key={videoSrc}
+            preload="auto"
+          >
             <source src={videoSrc} type="video/mp4" />
           </video>
         </div>
@@ -41,7 +66,7 @@ const Hero = () => {
 
       <div
         id="cta"
-        className="flex flex-col items-center opacity-0 translate-y-20"
+        className="flex flex-col items-center opacity-0"
       >
         <a href="https://firstledger.net/" className="btn">Buy</a>
         <p className="font-normal text-xl">From First Ledger</p>
