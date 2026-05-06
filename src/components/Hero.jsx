@@ -69,7 +69,7 @@ const Hero = () => {
         className="flex flex-col items-center opacity-0"
       >
         <a href="https://firstledger.net/" className="btn">Buy</a>
-        <a style={{ marginTop: '0rem', marginBottom: '1rem' }} className="mt-0 btn" href="https://t.me/iPhoneXRP_Portal" >Telegram</a>
+        <a style={{ marginTop: '0rem', marginBottom: '1rem' }} className="mt-0 btn" href="https://t.me/iTon_Portal" >Telegram</a>
         <p className="font-normal text-xl">From First Ledger</p>
       </div>
     </section>
