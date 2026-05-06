@@ -12,8 +12,8 @@ import {
 export const navLists = [
   { label: "Store", link: "#" },
   { label: "Mac", link: "#" },
-  { label: "Telegram", link: "https://t.me/iTon_Portal" },
-  { label: "X", link: "https://x.com/iPhone_XRP" },
+  { label: "Telegram", link: "https://t.me/iTonOfficial_Portal" },
+  { label: "X", link: "https://x.com/iTon_Official" },
 ];
 
 export const hightlightsSlides = [

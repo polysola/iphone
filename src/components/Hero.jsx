@@ -48,8 +48,8 @@ const Hero = () => {
   return (
     <section className="w-full nav-height bg-black relative">
       <div className="h-5/6 w-full flex-center flex-col">
-        <p id="hero" className="hero-title opacity-0">iPhone 15 Pro on XRP</p>
-        <img className='w-24 mb-12 sm:mb-0' src="/xrp.svg" alt="XRP Logo" />
+        <p id="hero" className="hero-title opacity-0">iPhone 15 Pro on TON</p>
+        <img className='w-24 mb-12 sm:mb-0' src="/ton.jpg" alt="Ton Logo" />
         <div className="md:w-10/12 w-9/12">
           <video
             className="pointer-events-none"
@@ -68,9 +68,9 @@ const Hero = () => {
         id="cta"
         className="flex flex-col items-center opacity-0"
       >
-        <a href="https://firstledger.net/" className="btn">Buy</a>
+        <a href="https://stonkslabs.com/trade/ton" className="btn">Buy</a>
         <a style={{ marginTop: '0rem', marginBottom: '1rem' }} className="mt-0 btn" href="https://t.me/iTon_Portal" >Telegram</a>
-        <p className="font-normal text-xl">From First Ledger</p>
+        <p className="font-normal text-xl">From StonksLabs</p>
       </div>
     </section>
   )
