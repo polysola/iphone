@@ -68,9 +68,9 @@ const Hero = () => {
         id="cta"
         className="flex flex-col items-center opacity-0"
       >
-        <a href="https://stonkslabs.com/trade/EQAAQTAevSiuT44B4i-upJE9E2G0mYuL5twr3RaUSYdfdibsn" className="btn">Buy</a>
+        <a href="https://groypfi.io/terminal" className="btn">Buy</a>
         <a style={{ marginTop: '0rem', marginBottom: '1rem' }} className="mt-0 btn" href="https://t.me/iTon_Portal" >Telegram</a>
-        <p className="font-normal text-xl">From StonksLabs</p>
+        <p className="font-normal text-xl">From Groypfi</p>
       </div>
     </section>
   )
